@@ -1,0 +1,79 @@
+//
+// Footer
+// --------------------------------------------------
+
+.footer-main {
+	background-color: #122f0f;
+	padding: 10px 0 0 0;
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+		height: 38px;
+		width: 60px;
+		background-image: url('../images/logotype_footer_dark.png');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		@include nt;
+		display: block;
+		@include image-2x("../images/logotype_footer_dark2x.png", 60px, 38px);
+	}
+	small {
+		color: #44743f;
+		text-transform: uppercase;
+		p {
+			margin: 0;
+			padding: 10px 0;
+		    clear: both;
+		    font-size: 17px;
+		    font-family: $title-font;
+		}
+		a {
+			color: #44743f!important;
+			outline: none;  /* removing outline in Mozilla */
+		    @include transition(all .2s ease);
+		    text-decoration: none;
+		    font-size: 15px;
+		    font-family: $base-font;
+		    &:active {
+		        background-color: transparent;
+		    }
+		    &:hover {
+		        color: #fff;
+		        text-decoration: none;
+		    }
+		    &:focus {
+		        outline:none!important;
+		        text-decoration: none;
+		    }
+		}
+	}
+	.links {
+		ul {
+			position: relative;
+			top: -2px;
+			li {
+				padding: 0;
+				margin-left: 10px;
+				a {
+					background-color: #44743f;
+					@include pie(50%);
+					@include box (41px);
+					text-align: center;
+					transition:background-color .4s ease-out 1s;
+					-o-transition:background-color .4s ease-out 1s;
+					-moz-transition:background-color .4s ease-out 1s;
+					-webkit-transition:background-color .4s ease-out 1s;
+					padding-top: 10px;
+					&:hover {
+						background-color: #fff;
+						@include t(.4s);
+					}
+					span {
+						color: #122f0f;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+} 

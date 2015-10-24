@@ -1,0 +1,28 @@
+{% include default_head.html %}
+
+{% if page.lang != 'ru' %}
+  <div class="alert alert-info">
+    <strong>NOTE:</strong> This page wasn't translated to english yet, though it includes very important information and pictures.
+  </div>
+{% endif %}
+
+  {{ content }}
+</div>
+
+{% include showcase.html context=page.photos %}
+
+<!-- END PAGE -->
+
+</main>
+
+<!-- END MAIN -->
+
+<div class='layout_footer'></div>
+</div>
+
+{% include footer.html %}
+
+<script type='text/javascript' src='/assets/js/new/showcase.js'></script>
+
+</body>
+</html>

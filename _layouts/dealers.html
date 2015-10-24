@@ -1,0 +1,15 @@
+{% include default_head.html %}
+
+  {% for dealer in page.dealers %}
+    <h2>{{ dealer.City }}</h2>
+
+    <address>
+      <strong>{{ dealer.Name }}</strong><br>
+      {{ dealer.Text || markdownify }}
+
+      <strong>E-Mail:</strong><br>
+      <a href="mailto:{{ dealer.Email }}">{{ dealer.Email }}</a><br />
+    </address>
+  {% endfor %}
+
+{% include default_foot.html %}

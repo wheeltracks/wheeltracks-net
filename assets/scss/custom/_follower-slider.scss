@@ -1,0 +1,107 @@
+/*************************************
+************************************** 
+************************************** 
+
+  Slider
+
+**************************************
+************************************** 
+**************************************/
+
+/*! http://responsiveslides.com v1.54 by @viljamis */
+#follow {
+
+	.follow-slider {
+		position: relative;
+		padding: 0;
+		padding-left: 90px;
+		.rslides {
+		  position: relative;
+		  list-style: none;
+		  overflow: hidden;
+		  width: 100%;
+		  padding: 0;
+		  margin: 0;
+		  top: 90px;
+		  z-index: 4;
+		}
+
+		.rslides li {
+		  -webkit-backface-visibility: hidden;
+		  position: absolute;
+		  display: none;
+		  width: 100%;
+		  left: 0;
+		  top: 0;
+
+			p {
+				font-size: 35px;
+				margin-top: 50px;
+				color:#525890!important; 
+				line-height: 1.2;
+				font-weight: 400; 
+			}
+
+			h4 {
+				font-size: 25px;
+				font-weight: 700;
+				padding-top: 12px;
+				margin-bottom: 10px;
+			}
+			h5 {
+				font-size: 17px;
+				font-weight: 700;
+			}
+			a {
+				font-size: 35px;
+				font-weight: 400;
+			}
+		  }
+
+		.rslides li:first-child {
+		  position: relative;
+		  display: block;
+		  float: left;
+		  }
+
+		.rslides img {
+		  display: inline-block;
+		  float: left;
+		  @include box(78px);
+		  @include pie(50%);
+		  border: 0;
+		  margin-right: 28px;
+		}
+
+		.rslides_tabs {
+			display: none;
+		}
+		.rslides_nav {
+			position: absolute;
+			top: 90px;
+			right: 0;
+			z-index: 6;
+			// @include ht;
+			width: 46px;height: 35px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			@include ht;
+			@include opacity(0.5);
+			@include t(.4s);
+			&:hover {
+				@include opacity(1);
+
+			}
+		}
+		.prev { 
+			right: 62px;
+			background-image: url('../images/left-arrow.png'); 
+
+		}
+		.next { 
+			background-image: url('../images/right-arrow.png');
+		} 
+	}
+} 
+
+

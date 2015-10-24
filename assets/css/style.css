@@ -1,0 +1,66 @@
+.logo {
+	background: url("../images/logotype.png") no-repeat;
+	width: 74px;
+	height: 44px;
+	display: block;
+}
+
+.model-box hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.model-box1 {
+	display: block;
+	padding: 4px;
+	margin-bottom: 20px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.model-box .sec-header {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #bbb;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+.model-box .price {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: 800;
+}
+
+@media(max-width: 992px) {
+	.model-box .price {
+		padding-bottom: 30px;
+	}
+}
+
+.model-box .car-weight {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+.img-padding {
+	margin: 10px;
+}

@@ -1,0 +1,10 @@
+<div class="row">
+  {% for block in section.blocks %}
+    <!--  -->
+    <div class="col-lg-5 {% cycle 'col-lg-offset-1', '' %} col-md-6 about__item">
+    <figure><img src="/assets/images/posts/index/{{block.pic}}" alt="{{ block.title }}" width="250" height="250" class="img-circle"/></figure>
+    <h6><strong>{{ block.title }}</strong></h6>
+      <p>{{ block.body | markdownify }}</p>
+    </div>
+  {% endfor %}
+</div>

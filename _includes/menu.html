@@ -1,0 +1,10 @@
+{% for post in site.posts reversed %}
+  {% if post.lang == page.lang %}
+    {% if post.type == 'page' %}
+      <li><a href='{{site.baseurl}}{{post.url}}'>{{post.title}}</a></li>
+    {% endif %}
+    {% if post.type == 'link' %}
+      <li><a href='{{post.link}}'>{{post.title}}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}

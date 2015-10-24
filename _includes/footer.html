@@ -1,0 +1,54 @@
+<!-- BEGIN FOOTER -->
+
+<footer class='footer-main center'>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-0 col-md-push-0 col-md-3">
+        <div class="logo"></div>
+      </div>
+      <div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6">
+        <small>Wheeltracks © {{ site.time | date: '%Y' }}. {{site.t[page.lang].copyright}}</small>
+      </div>
+
+      <div class="col-lg-3 col-lg-offset-0 col-md-offset-0 col-md-3">
+        {% if page.type == 'page' %}
+        <div class="links">
+          {% include social.html %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- END FOOTER -->
+
+<script type="text/javascript" src="/assets/js/new/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/new/bootstrap.min.js"></script>
+
+<script type='text/javascript' src='/assets/js/new/libs/jquery.autosize.js'></script>
+<script type='text/javascript' src='/assets/js/new/libs/jquery.watermark.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.validate.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.smooth-scroll.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.inview.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/isotope.pkgd.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/responsiveslides.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.mb.YTPlayer.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.magnific-popup.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/jquery.animateNumber.min.js'></script>
+<script type='text/javascript' src='/assets/js/new/owl.carousel.min.js'></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="/assets/js/new/libs/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    //Make visible media queries to IE7 , IE8 (visible only on server or localhost)
+
+    <link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    <script src="/assets/js/new/libs/respond.src.js"></script>
+<![endif]-->

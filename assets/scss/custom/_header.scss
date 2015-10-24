@@ -1,0 +1,88 @@
+/*************************************
+************************************** 
+************************************** 
+
+  HEADER
+
+**************************************
+************************************** 
+**************************************/
+
+header {
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1030;
+	width: 100%;
+	padding: 50px 0;
+
+	.logo {
+		// margin-top: 17px;
+		height: 44px;
+		margin-left: 0!important;
+		width: 325px;
+		background-image: url('../images/logo.png');
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		@include nt;
+		display: block;
+		@include image-2x("../images/logo2x.png", 325px, 88px);
+	}
+	.bars {
+		color: #fff;
+		@include opacity(.8);
+		@include t(.4s);
+		font-size: 30px;
+		margin-top: 12px;
+		&:hover {
+			@include opacity(1) ;
+		}
+	}
+	nav {
+		margin-top: 16px;
+		ul {
+			li {
+
+			}
+			li + li {
+				margin-left: 30px;
+			} 
+			a {
+				opacity: .5;
+				color: #fff;
+				@include t(.4s);
+				margin-top: 20px;
+				&:hover {
+					opacity: 1;
+					background-color: transparent!important;
+				}	
+				&:focus {
+					background-color: transparent!important;
+					
+				}	
+			}
+		}
+	}
+}
+.change {
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2); /* drop shadow */
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2); /* drop shadow */
+	box-shadow: 0 1px 1px rgba(0,0,0,.2); /* drop shadow */
+	@include t(.4s);
+	padding: 20px 0;
+	position: fixed;
+	.logo {
+		background-position: 50% -44px;
+
+	}
+	ul {
+		a {
+			color: #555555!important;
+		}
+	}
+	.bars {
+		color: #555555;
+	} 
+}

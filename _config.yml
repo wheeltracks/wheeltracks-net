@@ -1,0 +1,38 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: "Wheeltracks - all terrain vehicle tracks"
+baseurl: ""
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+permalink: /:categories/:title
+
+# Build settings
+markdown: kramdown
+
+languages:
+  - name: 'EN'
+    key: 'en'
+  - name: 'RU'
+    key: 'ru'
+
+t:
+  en:
+    title:  Wheeltracks
+    copyright: All rights reserved
+    keywords: Wheeltracks, all terrain vehicles, tracks for the vehicles, tracks for the Range Rover, tracks for Grand Cherokee
+    phoneAbbr: P.
+    phone: Phone
+    compatibility: Compatibility
+    details: Details
+    price: Price
+    forCarsWeight: For vehicles with full weight
+  ru:
+    title:  Wheeltracks
+    copyright: Все права защищены
+    keywords: Wheeltracks, нива на гусеницах, гусеницы на уаз, гусеницы на ниву, гусеницы на джип, Range Rover, Jeep, Рэйндж Ровер, гусеницы на Ниссан Патрол, Nissan Patrol, автомобиль на гусеницах, внедорожник, джип на гусеницах
+    phoneAbbr: Тел.
+    phone: Телефон
+    compatibility: Совместимость
+    details: Характеристики
+    price: Цена
+    forCarsWeight: Для автомобилей полной массой

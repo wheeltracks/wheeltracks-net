@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+  {% include home_head.html %}
+
+  <body class="homepage">
+
+    <div id="preloader"></div>
+
+    <div class="layout">
+
+      <!-- BEGIN POPUP -->
+      <div class="popup-email">
+          <div class="element">
+            <button id="btn" class="btn1 blue-btn medium" type="button">OK <span class="fa fa-check"></span></button>
+          </div>
+        </div>
+
+      <!-- END POPUP -->
+
+      <!-- BEGIN HEADER -->
+
+      <header>
+
+         <div class="container">
+
+          <a href="/" class="logo left"></a>
+          <span class="fa fa-bars hide bars"></span>
+          <nav class="right ">
+            <ul class="list-inline">
+                {% include menu.html %}
+            </ul>
+          </nav>
+
+         </div>
+
+      </header>
+
+      <!-- BEGIN MAIN -->
+
+      <main id="page-content">
+
+        <!-- BEGIN SUBHEADER -->
+
+        <section id="subheader" class="verticalize verticalize--full">
+
+          <div class="verticalize__box container">
+            <article>
+              <h4>{{ page.subtitle }}</h4>
+              <a href="#about" class="btn1 btn--white big findout-more">{{ page.link }}<span class="icon-right-arrow"></span></a>
+            </article>
+          </div>
+          <div class="clearfix"></div>
+
+          <ul class="rslides" id="slider1">
+            <li><img src="/assets/images/slides/img1.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img2.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img3.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img4.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img5.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img6.jpg" alt=""></li>
+          </ul>
+
+        </section>
+
+        <!-- END SUBHEADER -->
+
+        {% for section in page.sections %}
+          <section id="{{ section.id }}">
+            <div class="container">
+              {% if section.title %}
+                <h3 class="section-heading"><strong>{{ section.title | upcase }}</strong></h3>
+              {% endif %}
+              {% if section.subtitle %}
+                <p class="center">{{ section.subtitle }}</p>
+              {% endif %}
+
+              {% include home/{{section.id}}.html section=section %}
+            </div>
+          </section>
+        {% endfor %}
+      </main>
+      <!-- END MAIN -->
+
+      <div class='layout_footer'></div>
+    </div>
+
+    {% include footer.html social=false %}
+
+    <a id="top" href="#subheader"></a>
+
+    <script type='text/javascript' src='/assets/js/new/init.js'></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,16 @@
+{% include default_head.html %}
+
+  {% for contact in page.contacts %}
+    <h4>{{ contact.Title }}</h4>
+    <address>
+      <strong>{{ contact.Name }}</strong><br>
+      {% if contact.Phone %}
+      <abbr title="{{ site.t[page.lang].phone }}">{{ site.t[page.lang].phoneAbbr }}</abbr> {{ contact.Phone }}
+      {% endif %}
+      <p>
+        Email: <a href="mailto:{{ contact.Email }}">{{ contact.Email }}</a><br />
+      </p>
+    </address>
+  {% endfor %}
+
+{% include default_foot.html %}

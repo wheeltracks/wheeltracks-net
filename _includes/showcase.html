@@ -1,0 +1,29 @@
+<hr>
+<div class="showcase">
+	<h2><strong>{{ include.context.Title }}</strong></h2>
+	<div class="filter_wrap">
+		<ul id="filters">
+      {% for filter in include.context.Filters %}
+			<li>
+				<a class="gray-3 filter btn1" data-filter="{{ filter.key }}">{{ filter.title }}
+					<span class="fa fa-bars"></span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="isotope js-isotope" id="filter_content" data-isotope-options='{ "itemSelector": ".box", "layoutMode": "fitRows" }'
+			style="position: relative; height: 510px;">
+
+      {% for photo in include.context.Items %}
+
+				<div class="box popup-gallery category-{{ photo.Category }}"
+					style="position: absolute; left: 0px; top: 0px;">
+					<a href="/assets/images/posts/stopper-of-turnover/{{ photo.File }}">
+          <img src="/assets/images/posts/stopper-of-turnover/{{ photo.File }}" height="150" width="200"/>
+					<div class="hover verticalize verticalize--full"><div class="verticalize__box"></div></div>
+				</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

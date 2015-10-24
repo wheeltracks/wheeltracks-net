@@ -1,0 +1,27 @@
+#ascrail2000 {
+	background-color: #fff;
+	width: 8px!important;
+	z-index: 99999999999!important;
+	>div {
+		background-color: $color-dark!important;
+		width: 8px!important;
+		border: none!important;
+		border-radius: none!important;
+		-moz-border-radius: none!important;
+		-webkit-border-radius: none!important;
+		-o-border-radius: none!important;
+	}
+}
+#ascrail2001 {
+	background-color: #dbdbdb;
+	width: 8px!important;
+	>div {
+		background-color: $second-clr!important;
+		width: 3px!important;
+		border: none!important;
+		border-radius: none!important;
+		-moz-border-radius: none!important;
+		-webkit-border-radius: none!important;
+		-o-border-radius: none!important;
+	}
+}

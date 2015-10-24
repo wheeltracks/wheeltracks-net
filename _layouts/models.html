@@ -1,0 +1,52 @@
+{% assign t = site.t[page.lang] %}
+{% assign images = '/assets/images/posts/models' %}
+{% include default_head.html %}
+
+  {{content}}
+
+  {% for serie in page.series %}
+
+    <h2>{{serie.Title}}</h2>
+
+    {% for model in serie.Models %}
+
+      <h3>{{ model.Name }}</h3>
+      <div class="model-box thumbnail" itemscope itemtype="http://schema.org/ProductModel" itemid="{{ model.Name }}">
+        <meta itemprop="name" name="name" content="{{ model.Name }}" />
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6">
+              <img itemprop="logo" class="img-rounded" src="{{ images }}/{{ model.Image }}"/>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="caption">
+              <div class="visible-xs"><hr></div>
+              <div class="sec-header">{{ t.forCarsWeight }}</div>
+              <div class="car-weight">{{ model.CarWeight }}</div>
+              <hr>
+              <div class="sec-header">{{ t.price }}</div>
+              <div class="price">{{ model.Price || markdownify }}</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="caption">
+              <div class="visible-xs"><hr></div>
+              <div class="sec-header">{{ t.compatibility }}</div>
+              <p>
+                  {{ model.Compatibility || markdownify }}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 ">
+            <div class="visible-xs"><hr></div>
+            <div class="sec-header">{{ t.details }}</div>
+            <p itemprop="description">
+                {{ model.Details | markdownify }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <br/>
+    {% endfor %}
+  {% endfor %}
+
+{% include default_foot.html %}

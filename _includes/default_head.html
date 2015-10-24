@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="default {% if page.layout != 'default' %}{{page.layout}}{% endif %}">
+
+    <div class="layout">
+
+      <!-- BEGIN POPUP -->
+
+      <div class="popup-email">
+        <div class="element">
+          <button id="btn" class="btn1 blue-btn medium" type="button">OK <span class="fa fa-check"></span></button>
+        </div>
+      </div>
+
+      <!-- END POPUP -->
+
+    {% include header.html %}
+
+    <!-- BEGIN MAIN -->
+
+    <main id="page-content">
+      <div class="container content">
+      	<h1 class="content-default"><strong>{{ page.title }}</strong></h1>
