@@ -1,18 +1,18 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Wheeltracks
+email: support@wheeltracks.net
 description: "Wheeltracks - all terrain vehicle tracks"
 baseurl: ""
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://wheeltracks.net" # the base hostname & protocol for your site
 permalink: /:categories/:title
 
 # Build settings
 markdown: kramdown
 
 languages:
-  - name: 'EN'
+  - name: 'English'
     key: 'en'
-  - name: 'RU'
+  - name: 'Русский'
     key: 'ru'
 
 t:

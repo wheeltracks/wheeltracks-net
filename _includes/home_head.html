@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/homepage.css" | prepend: site.baseurl }}">
 
+  <link href="{{site.url}}/en/" hreflang="x-default" rel="alternate">
+  <link href="{{site.url}}/en/" hreflang="en" rel="alternate">
+  <link href="{{site.url}}/ru/" hreflang="ru" rel="alternate">
+
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
 
   <script src="{{ '/assets/js/modernizr-2.7.1.min.js' | prepend: site.baseurl }}"></script>
 
   <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{site.title}} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 </head>

@@ -8,6 +8,16 @@
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+  {% assign page_id = page.id | replace: '/', '' | replace: {{page.lang}}, '' %}
+  {% for post in site.posts %}
+    {% if post.id contains page_id %}
+      {% if post.lang == 'en' %}
+      <link href="{{post.url | prepend: site.baseurl | prepend: site.url }}" hreflang="x-default" rel="alternate">
+      {% endif %}
+      <link href="{{post.url | prepend: site.baseurl | prepend: site.url }}" hreflang="{{post.lang}}" rel="alternate">
+    {% endif %}
+  {% endfor %}
+
   <link href="{{ "/assets/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" type='text/css'>
 
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
@@ -16,5 +26,5 @@
 
   <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{site.title}} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 </head>
