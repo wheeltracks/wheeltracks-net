@@ -3,7 +3,7 @@ title: Wheeltracks
 email: support@wheeltracks.net
 description: "Wheeltracks - all terrain vehicle tracks"
 baseurl: ""
-url: "http://wheeltracks.net" # the base hostname & protocol for your site
+url: "http://www.wheeltracks.net" # the base hostname & protocol for your site
 permalink: /:categories/:title
 
 # Build settings

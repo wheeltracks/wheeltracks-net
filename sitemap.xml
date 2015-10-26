@@ -1,0 +1,50 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {% for post in site.posts %}
+    {% if post.type != 'link' %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% for lang in site.languages %}
+        {% if post.lang != lang.key %}
+          {% assign post_url = post.url | replace: post.lang, lang.key %}
+          {% for alt_post in site.posts %}
+            {% if alt_post.url == post_url %}
+              <xhtml:link rel="alternate" hreflang="{{alt_post.lang}}" href="{{site.url}}{{alt_post.url}}"/>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      {% if post.lastmod == null %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+    {% endif %}
+  {% endfor %}
+  {% for page in site.pages %}
+    {% if page.sitemap != null and page.sitemap != empty %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+        <priority>{{ page.sitemap.priority }}</priority>
+       </url>
+    {% endif %}
+  {% endfor %}
+  {% assign link_pages = (site.posts | where: "type" , "link" | group_by: "link") %}
+  {% for link in link_pages %}
+    <url>
+      <loc>{{ link.name }}</loc>
+      <lastmod>{{ link.items[0].date | date_to_xmlschema }}</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+     </url>
+  {% endfor %}
+</urlset>

@@ -1,21 +1,22 @@
 ---
 layout: stopper-of-turnover
+index: 1
 type: page
-lang: en
+lang: ru
 categories:
-  - en
-title: Stoppers Of Turnover
+  - ru
+title: Ограничители Переворота
 photos:
-  Title: Photos
+  Title: Фотографии ограничителей
   Filters:
     -
-      title: 'All'
+      title: 'Все'
       key: '*'
     -
-      title: 'Niva'
+      title: 'Нива'
       key: .category-niva
     -
-      title: 'Nissan Patrol'
+      title: 'Ниссан Патрол'
       key: .category-patrol
   Items:
     -
