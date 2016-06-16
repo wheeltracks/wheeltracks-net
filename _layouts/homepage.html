@@ -21,7 +21,7 @@
 
       <!-- BEGIN HEADER -->
 
-      <header class="whitetop">
+      <header>
 
          <div class="container">
 
@@ -45,7 +45,22 @@
 
         <section id="subheader" class="verticalize verticalize--full">
 
-          {% include discounts.html %}
+          <div class="verticalize__box container">
+            <article>
+              <h4>{{ page.subtitle }}</h4>
+              <a href="#about" class="btn1 btn--white big findout-more">{{ page.link }}<span class="icon-right-arrow"></span></a>
+            </article>
+          </div>
+          <div class="clearfix"></div>
+
+          <ul class="rslides" id="slider1">
+            <li><img src="/assets/images/slides/img1.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img2.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img3.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img4.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img5.jpg" alt=""></li>
+            <li><img src="/assets/images/slides/img6.jpg" alt=""></li>
+          </ul>
 
         </section>
 
