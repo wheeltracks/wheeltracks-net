@@ -4,7 +4,7 @@ email: support@wheeltracks.net
 description: "Wheeltracks - all terrain vehicle tracks"
 baseurl: ""
 url: "http://www.wheeltracks.net" # the base hostname & protocol for your site
-permalink: /:categories/:title
+permalink: /:categories/:slug
 
 # Build settings
 markdown: kramdown
