@@ -25,6 +25,7 @@ t:
     compatibility: Compatibility
     details: Details
     price: Price
+    dealerPrice: Dealer Price
     forCarsWeight: For vehicles with full weight
   ru:
     title:  Wheeltracks
@@ -35,4 +36,5 @@ t:
     compatibility: Совместимость
     details: Характеристики
     price: Цена
+    dealerPrice: Цена для Дилеров
     forCarsWeight: Для автомобилей полной массой

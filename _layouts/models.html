@@ -25,6 +25,11 @@
               <hr>
               <div class="sec-header">{{ t.price }}</div>
               <div class="price">{{ model.Price || markdownify }}</div>
+              {% if model.DealerPrice %}
+                <hr>
+                <div class="sec-header">{{ t.dealerPrice }}</div>
+                <div class="price">{{ model.DealerPrice || markdownify }}</div>
+              {% endif %}
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6">
